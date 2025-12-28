@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>homepage</title>
+<style>
+body{
+background-image:url('image6.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+}
+.header{
+display:flex;
+background-color:#003366;
+width: 100%;
+height: 40vh;
+align-items:center;
+padding:20px;
+font-size:10px;
+justify-content:space-between;
+}
+.menu{
+display:flex;
+flex-direction:row;
+padding:20px;
+gap:20px;
+}
+.hamburger{
+display:none;
+}
+.menu a{
+text-decoration:none;
+margin:10px;
+padding:5px;
+color:darkgray;
+font-size:18px;
+}
+.menu a:hover{
+color:red;
+}
+@media(max-width: 768px){
+.menu{
+display:none;
+}
+#menu.active{
+#menu.active a{
+font-size:12px !important;
+padding:5px;
+}
+display:flex;
+flex-direction:column;
+background-color:lavender;
+position:absolute;
+top:20px;
+right:0;
+z-index: 100%;
+margin:20px;
+width:50%;
+height:50%;
+}
+.hamburger{
+display:block;
+cursor:pointer;
+color:white;
+}}
+.logo{
+width:250px;
+height:250px;
+margin:20px;
+}
+.content{
+text-align:center;
+padding:20px;
+margin:20px;
+}
+img{
+width:150px;
+height:150px;
+border-radius:50px;
+text-align:center;
+}
+img:hover{
+cursor:pointer;
+transform: scale(1.4);
+transition:0.4s;
+}
+.card{
+display:flex;
+background-color:white;
+width:70%;
+margin-left:auto;
+margin-right:auto;
+margin-top:20px;
+margin-bottom:20px;
+align-item:center;
+border-radius:20px;
+box-shadow:0 2px 4px;
+justify-content:center;
+}
+h1,h3{
+color:red;
+}
+footer{
+background-color:lightblue;
+width:100%;
+color:black;
+padding:20px;
+}
+.footer-container{
+display:flex;
+justify-content:center;
+gap:5px;
+flex-wrap: wrap;
+}
+.footer-container p{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<img src="logo.png"  class="logo" alt="logo">
+<div class="hamburger" Id="hamburger">
+&#9776
+</div>
+<nav class="menu" Id="menu">
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT US</a>
+<a href="course.html">COURSES</a>
+<a href="gallery.html">GALLERY</a>
+<a href="contact.html">CONTACT</a>
+</div>
+</div>
+<div class="card">
+<div class="content">
+<img src="image9.jpg" alt="county logo">
+<h3>COUNTY GOVERNMENT OF KIAMBU DEPARTMENT OF EDUCATION, GENDER, CULTURE & SOCIAL SERVICES</h3>
+</div>
+</div>
+<div class="card">
+<div class="content">
+<img src="image1.png"  alt="principal picture">
+<h1>Mr. Elijah Mwangi /principal Jujafarm VTC</h1> 
+</div>
+</div>
+<footer>
+<div class="footer-container">
+<p>📞 phone:0720849995</p>
+<p>📧 Email:jujafarmvtc@gmail.com</p>
+<p>📮 P.O.Box:374-01001</p>
+<p>📘 Facebook:jujafarm polytechnic</p>
+<p>📍 Location:Jujafarm,Kiambu,Kenya</p>
+</div>
+</footer>
+<script>
+const hamburger= document.getElementById('hamburger');
+const menu=document.getElementById('menu');
+if(hamburger && menu){
+hamburger.addEventListener('click',() =>{
+menu.classList.toggle('active')
+})}
+</script>
+</body>
+</html>

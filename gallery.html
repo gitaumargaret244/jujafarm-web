@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GALLERY</title>
+<style>
+body{
+background-color:#eef4ff;
+}
+.header{
+background-color:#003366;
+width:100%;
+height:40vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:12px;
+margin:0;
+}
+.menu{
+display:flex;
+flex-direction:row;
+padding:20px;
+gap:20px;
+}
+.hamburger{
+display:none;
+}
+.menu a{
+text-decoration:none;
+font-size:12px;
+color:darkgray;
+padding:5px;
+margin:10px;
+}
+.menu a:hover{
+color:red;
+cursor:pointer;
+}
+@media(max-width: 768px){
+.menu{
+display:none;
+}
+#menu.active{
+display:flex;
+flex-direction:column;
+background-color:lavender;
+position:absolute;
+width:50%;
+height:50%;
+top:20px;
+right:0;
+padding:5px;
+margin:20px;
+z-index:100%;
+}
+.menu.active a{
+font-size:12px;
+padding:5px;
+}
+.hamburger{
+display:block;
+cursor:pointer;
+color:white;
+}}
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 500px));
+gap:20px;
+justify-content: center;
+}
+.slider{
+position:relative;
+width:100%;
+max-width:500px;
+height:300px;
+border-radius:20px;
+box-shadow:0 4px 10px;
+overflow:hidden;
+justify-self:stretch;
+}
+.slider img{
+position:absolute;
+width:100%;
+height:100%;
+inset:0;
+object-fit:cover;
+opacity:0;
+animation-name:slide;
+animation-timing-function:easy-in-out;
+animation-iteration-count:infinite;
+animation-fill-mode: both;
+}
+.slider-electrical img{
+animation-duration: 24s;
+}
+.slider-electrical img:nth-child(1) { animation-delay: 0s;}
+.slider-electrical img:nth-child(2) { animation-delay: 4s;}
+.slider-electrical img:nth-child(3) { animation-delay: 8s;}
+.slider-electrical img:nth-child(4) { animation-delay: 12s;}
+.slider-electrical img:nth-child(5) { animation-delay: 16s;}
+.slider-electrical img:nth-child(6) { animation-delay: 20s;}
+@keyframes slide {
+0% {opacity: 0; }
+5% {opacity: 1;}
+30% {opacity: 1;}
+35% {opacity: 0;}
+100% {opacity: 0;}
+}
+
+.slider-plumbing img{
+animation-duration: 12s;
+}
+.slider-plumbing img:nth-child(1) { animation-delay: 0s;}
+.slider-plumbing img:nth-child(2) { animation-delay: 4s;}
+.slider-plumbing img:nth-child(3) { animation-delay: 8s;}
+@keyframes slide {
+0% {opacity: 0; }
+5% {opacity: 1;}
+30% {opacity: 1;}
+350% {opacity: 0;}
+100% {opacity: 0;}
+}
+
+.slider-beauty img{
+animation-duration: 12s;
+}
+.slider-beauty img:nth-child(1) { animation-delay: 0s;}
+.slider-beauty img:nth-child(2) { animation-delay: 4s;}
+.slider-beauty img:nth-child(3) { animation-delay: 8s;}
+}
+@keyframes slide {
+0% {opacity: 0; }
+5% {opacity: 1;}
+30% {opacity: 1;}
+35% {opacity: 0;}
+100% {opacity: 0;}
+}
+.footer{
+background-color:lightblue;
+width:100%;
+color:black;
+padding:20px;
+}
+.footer-container{
+display:flex;
+flex-wrap: wrap;
+justify-content:center;
+gap:20px;
+}
+.footer-container p{
+font-size:12px;
+margin:0;
+}
+h3{
+color:#00555A;
+font-family:Bodoni MT;
+}
+.logo{
+max-width:100%;
+width:200px;
+height:auto;
+margin:10px auto;
+display:block;
+margin-left:0;
+}
+img:hover{
+cursor:pointer;
+transform: scale(1.4);
+transition:0.4s;
+}
+h2{
+padding;10px;
+color: black;
+font-family:Bodoni MT;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<img src="logo.png" class="logo" alt="logo">
+<div class="hamburger" Id="hamburger">
+&#9776
+</div>
+<nav class="menu" Id="menu">
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT US</a>
+<a href="course.html">COURSES</a>
+<a href="gallery.html">GALLERY</a>
+<a href="contact.html">CONTACT</a>
+</div>
+</div>
+<h2>JUJAFARM VOCATIONAL TRAINING CENTER GALLERY</h2>
+<div class="gallery">
+<div class="slider slider-img slider-electrical img">
+<img src="image3.jpg" alt="image 1">
+<img src="image11.jpg" alt="image 2">
+<img src="image14.jpg" alt="image 3">
+<img src="image15.jpg" alt="image 4">
+<img src="image10.jpg" alt="image 5">
+<img src="image25.jpg" alt="image 6">
+</div>
+<div class="slider slider-img slider-plumbing img">
+<img src="image5.jpg" alt="image 1">
+<img src="image13.jpg" alt="image 2">
+<img src="image18.jpg" alt="image 3">
+</div>
+<div class="slider slider-img slider-beauty img">
+<img src="image7.jpg" alt="image 1">
+<img src="image4.jpg" alt="image 2">
+<img src="image12.jpg" alt="image 3">
+</div>
+</div>
+<div class="footer">
+<div class="footer-container">
+<p>📞 phone:0720849995</p>
+<p>📧 Email:jujafarmvtc@gmail.com</p>
+<p>📮 P.O.Box:374-01001</p>
+<p>📘 Facebook:jujafarm polytechnic</p>
+<p>📍 Location:Jujafarm,Kiambu,Kenya</p>
+</div>
+</div>
+<script>
+const hamburger=document.getElementById('hamburger');
+const menu=document.getElementById('menu');
+if(hamburger && menu){
+hamburger.addEventListener('click', () =>{
+menu.classList.toggle('active')
+})}
+</script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACT US</title>
+<style>
+body{
+background-color:honeydew;
+}
+.header{
+background-color:#003366;
+justify-content:space-between;
+width:100%;
+height:40vh;
+align-items:center;
+display:flex;
+font-size:12px;
+margin:0;
+}
+.menu{
+display:flex;
+flex-direction:row;
+padding:20px;
+gap:20px;
+}
+.hamburger{
+display:none;
+}
+.menu a{
+text-decoration:none;
+font-size:12px;
+color:darkgray;
+padding:5px;
+margin:10px;
+}
+.menu a:hover{
+color:red;
+cursor:pointer;
+}
+@media(max-width: 768px){
+.menu{
+display:none;
+}
+#menu.active{
+display:flex;
+flex-direction:column;
+background-color:lavender;
+position:absolute;
+width:50%;
+height:50%;
+top:20px;
+right:0;
+padding:5px;
+margin:20px;
+z-index:100%;
+}
+.hamburger{
+display:block;
+color:white;
+cursor:pointer;
+}}
+.footer{
+background-color:lightblue;
+width:100%;
+color:black;
+padding:20px;
+}
+.footer-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+.footer-container p{
+font-size:12px;
+margin:0;
+}
+.card{
+background: white;
+padding:20px;
+max-width:500px;
+margin:auto;
+border-radius:20px;
+box-shadow:0 4px 20px;
+}
+.logo{
+max-width:100%;
+width:200px;
+height:auto;
+margin:10px auto;
+display:block;
+margin-left:0;
+}
+img:hover{
+cursor:pointer;
+transform:scale(1.4);
+transition:0.4s;
+}
+.h2{
+color:black;
+text-alignment:center;
+margin:auto;
+}
+.card-title{
+text-align:center;
+margin-bottom:20px;
+}
+.map-container iframe{
+width:100%;
+height:200px;
+border:0;
+border-radius:20px;
+}
+</head>
+</style>
+<body>
+<div class="header">
+<img src="logo.png" class="logo"  alt="logo">
+<div class="hamburger" Id="hamburger">
+&#9776
+</div>
+<nav class="menu" Id="menu">
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT US</a>
+<a href="course.html">COURSES</a>
+<a href="gallery.html">GALLERY</a>
+<a href="contact.html">CONTACT</a>
+</div>
+</div>
+<div class="card">
+<h2 class="card-title">We are happy to here from you!</h2>
+<form action="https://formspree.io/f/xgvbgjod"method="post">
+<label>Full Name:</label><br>
+<input type="text"name="Name"><br><br>
+<label>Email:</label><br>
+<input type="email" name="Email"><br><br>
+<label>Phone:</label><br>
+<input type="number" name=" phone number"><br><br>
+<label>message:</label><br>
+<textarea rows="4"name="message"></textarea><br><br>
+<button type="submit">send</button>
+</form>
+</div>
+<ul>
+<li>Our offices are opened Monday-friday: 8:00AM-5:00PM</li>
+</ul>
+<div class="map-container">
+<h2>Our Location</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13416.969496984151!2d37.07008771204766!3d-1.167933501679664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4342e350c6cb%3A0xbc7539e4b08659ea!2sJujafarm%20Vocational%20Trainnig%20Centre!5e0!3m2!1sen!2ske!4v1766749661647!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="footer">
+<div class="footer-container">
+<p>📞 phone:0720849995</p>
+<p>📧 Email:jujafarmvtc@gmail.com</p>
+<p>📮 P.O.Box:374-01001</p>
+<p>📘 Facebook:jujafarm polytechnic</p>
+<p>📍 Location:Jujafarm,Kiambu,Kenya</p>
+</div>
+</div>
+<script>
+const hamburger=document.getElementById('hamburger');
+const menu=document.getElementById('menu');
+if(hamburger && menu){
+hamburger.addEventListener('click' () =>{
+menu.classList.toggle('active')
+})}
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABOUT US</title>
+<style>
+body{
+background-color:honeydew;
+}
+.header{
+display:flex;
+background-color:#003366;
+width: 100%;
+height: 40vh;
+align-items:center;
+padding:20px;
+font-size:10px;
+justify-content:space-between;
+}
+.header.logo{
+max-width:100%;
+width:250px;
+height:auto;
+margin-left:0;
+display:block;
+}
+.logo{
+max-width:100%;
+width:250px;
+height:auto;
+margin:10px auto;
+display:block;
+}
+.content{
+text-align:center;
+padding:5px;
+color:black;
+}
+img{
+width:200px;
+height:200px;
+border-radius:20px;
+}
+img:hover{
+transform: scale(1.0);
+transition:0.4s;
+}
+.footer{
+background-color:lightblue;
+width:100%;
+color:black;
+padding:20px;
+}
+.footer-container{
+display:flex;
+justify-content:center;
+gap:5px;
+flex-wrap: wrap;
+}
+.footer-container p{
+font-size:12px;
+}
+h3{
+color:red;
+}
+.card{
+background-color:honeydew;
+margin:20px;
+width:50%;
+padding:20px;
+border-radius:20px;
+box-shadow:0 2px 4px;
+overflow:hidden;
+hover{
+transform: scale(1.0);
+transition:0.4s;
+}}
+.card-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+img:hover{
+cursor:pointer;
+transform: scale(1.4);
+transition:0.4s;
+}
+.menu{
+display:flex;
+flex-direction:row;
+padding:20px;
+gap:20px;
+}
+.hamburger{
+display:none;
+}
+.menu a{
+text-decoration:none;
+margin:10px;
+padding:5px;
+color:darkgray;
+font-size:12px;
+}
+.menu a:hover{
+color:red;
+cursor:pointer;
+}
+@media(max-width: 768px){
+.card{
+width:100%;
+}
+.menu{
+display:none !important;
+}
+.hamburger{
+display:block !important;
+cursor:pointer;
+color:white;
+}
+.menu.active{
+display:flex !important;
+flex-direction:column;
+background-color:lavender;
+position:absolute;
+top:20px;
+right:0;
+z-index: 100%;
+margin:20px;
+width:50%;
+height:50%;
+.menu a{
+font-size:12px;
+padding:5px;
+}
+}
+.card-full{
+background-color:honeydew;
+margin:20px;
+width:100%;
+padding:20px;
+border-radius:20px;
+box-shadow:0 2px 4px;
+overflow:hidden;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<img src="logo.png"  class="header-logo" alt="logo">
+<div class="hamburger" id="hamburger">
+&#9776
+</div>
+<nav class="menu" id="menu">
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT US</a>
+<a href="course.html">COURSES</a>
+<a href="gallery.html">GALLERY</a>
+<a href="contact.html">CONTACT</a>
+</div>
+</div>
+<div class="card-container">
+<div class="card-full">
+<img src="logo.png" class="logo" alt="logo">
+<h3>ABOUT US</h3>
+<p>Jujafarm Vocational Training Center is a training institute under the county government of Kiambu department of education, gender,culture and social service.We operate in compliance with national training standards and prepare our trainees for assessments conducted by the National Industrial Training Authority(NITA). Through this alignment, our learners are evaluated using recognized competency-based examinations that enhance their employability and professional credibility. We are committed to providing quality training, integrity and continuous learner support in preparation for nationally recognized certification.</p>
+</div>
+</div>
+<div class="card-container">
+<div class="card">
+<div class="content">
+<img src="logo.png" class="logo" alt="logo">
+<h3>OUR VISION</h3>
+<p>LET'S SHINE TECHNOLOGICALLY</p>
+</div>
+</div>
+<div class="card">
+<div class="content">
+<img src="logo.png" class="logo" alt="logo">
+<h3>OUR MISSION</h3>
+<p>TO BE AN EXCELLENT NATIONAL CENTER OF TRAINING IN ALL TECHNICAL AREAS</P>
+</div>
+</div>
+<div class="card">
+<div class="content">
+<img src="logo.png" class="logo" alt="logo">
+<h3>OUR MOTTO</h3>
+<p>SELF DISCIPLINE</p>
+</div>
+</div>
+<div class="card-full">
+<div class="content">
+<h3>WHY CHOOSE US</h3>
+<p>We Jujafarm Vocational Training Center offer hands-on, skill-based training designed to prepare learners for real-world work environments. With experienced instructors, a supportive learning atmosphere, and a strong focus on practical competence, we equip our students with the confidence and skills needed to succeed in today's job market.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="footer-container">
+<p>📞 phone:0720849995</p>
+<p>📧 Email:jujafarmvtc@gmail.com</p>
+<p>📮 P.O.Box:374-01001</p>
+<p>📘 Facebook:jujafarm polytechnic</p>
+<p>📍 Location:Jujafarm,Kiambu,Kenya</p>
+</div>
+</div>
+<script>
+const hamburger=document.getElementById('hamburger');
+const menu=document.getElementById('menu')
+if(hamburger && menu){
+hamburger.addEventListener('click', () =>{
+menu.classList.toggle('active')
+})}
+</script>
+</body>
+</html>
+
